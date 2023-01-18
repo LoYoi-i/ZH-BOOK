@@ -1,7 +1,7 @@
 应用对象
 ==================
 
-``app``
+## ``app``
 
 **描述**
 提供对 Premiere Pro 中对象和应用程序设置的访问.
@@ -11,7 +11,7 @@
 Attributes 属性
 ==========
 
-``app.anywhere``
+## ``app.anywhere``
 
 **描述**
 `anywhere`, 提供对可用 Anywhere 服务器的访问。仅在 Anywhere 配置中运行时可用（已停产）.
@@ -20,7 +20,7 @@ Attributes 属性
 `anywhere`.
 
 *********************************************
-``app.build``
+## ``app.build``
 
 **描述**
 正在运行的 Premiere Pro 版本号。
@@ -34,7 +34,7 @@ Attributes 属性
     parseInt(app.build); // 45
 
 *********************************************
-``app.encoder``
+## ``app.encoder``
 
 **描述**
 提供对 Adobe Media Encoder（在同一系统上）的访问。
@@ -45,7 +45,7 @@ https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-e
 `encoder`.
 
 *********************************************
-``app.getAppPrefPath``
+## ``app.getAppPrefPath``
 
 **描述**
 包含当前活动的“Adobe Premiere Pro Prefs”文件的路径。
@@ -60,8 +60,7 @@ https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-e
     app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 
 *********************************************
-
-``app.getAppSystemPrefPath``
+## ``app.getAppSystemPrefPath``
 
 **描述**
 Premiere Pro 的活动配置文件，不特定于给定用户。
@@ -75,7 +74,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
     app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 
 *********************************************
-``app.getPProPrefPath``
+## ``app.getPProPrefPath``
 
 **描述**
 包含当前活动的“Adobe Premiere Pro Prefs”文件的路径。
@@ -89,7 +88,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
     app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 
 *********************************************
-``app.getPProSystemPrefPath``
+## ``app.getPProSystemPrefPath``
 
 **描述**
 Premiere Pro 的活动配置文件，不特定于给定用户。
@@ -103,7 +102,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
     app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 
 *********************************************
-``app.learnPanelContentDirPath``
+## ``app.learnPanelContentDirPath``
 
 **描述**
 获取学习面板的内容目录路径。
@@ -117,7 +116,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
     app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
 
 *********************************************
-``app.learnPanelExampleProjectDirPath``
+## ``app.learnPanelExampleProjectDirPath``
 
 **描述**
 获取学习面板的示例项目目录路径。
@@ -131,7 +130,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
     app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
 
 *********************************************
-``app.metadata``
+## ``app.metadata``
 
 **描述**
 获取应用程序元数据对象。
@@ -140,7 +139,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 `metadata`, 只读.
 
 *********************************************
-``app.path``
+## ``app.path``
 
 **描述**
 获取应用程序可执行文件的路径。
@@ -150,10 +149,11 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 
 **示例**
 获取应用程序可执行文件的路径。
+
     app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
 
 *********************************************
-``app.production``
+## ``app.production``
 
 **描述**
 目前积极生产。
@@ -162,17 +162,17 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 `production` 如果至少有 1 个生产是开放的, ``null`` 否则.
 
 *********************************************
-``app.project``
+## ``app.project``
 
 **描述**
 
 当前活动的项目。
 
 **类型**
-`project`.
+## `project`.
 
 *********************************************
-``app.projectManager``
+## ``app.projectManager``
 
 **描述**
 
@@ -182,7 +182,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 `projectManager`.
 
 *********************************************
-``app.projects``
+## ``app.projects``
 
 **描述**
 引用所有打开项目的数组； ``numProjects`` 包含大小。
@@ -193,7 +193,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 
 
 *********************************************
-``app.properties``
+## ``app.properties``
 
 **描述**
 属性对象提供访问和修改首选项值的方法。
@@ -202,7 +202,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 `properties`, 只读;
 
 *********************************************
-``app.sourceMonitor``
+## ``app.sourceMonitor``
 
 **描述**
 提供访问 : `sourceMonitor`.
@@ -212,7 +212,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 
 
 *********************************************
-``app.userGuid``
+## ``app.userGuid``
 
 **描述**
 
@@ -223,8 +223,7 @@ Premiere Pro 的活动配置文件，不特定于给定用户。
 字符串; 只读.
 
 *********************************************
-
-``app.version``
+## ``app.version``
 
 **描述**
 Premiere Pro 的版本，提供 API。
@@ -240,7 +239,7 @@ Premiere Pro 的版本，提供 API。
 # Methods 方法
 
 *********************************************
-``app.enableQE()``
+## ``app.enableQE()``
 
 **描述**
 启用 Premiere Pro 的 QE DOM。
@@ -252,7 +251,7 @@ None.
 如果启用了 QE DOM，则返回 true。
 
 *********************************************
-``app.getEnableProxies()``
+## ``app.getEnableProxies()``
 
 **描述**
 确定当前是否启用代理使用。
@@ -264,7 +263,7 @@ None.
 如果启用了代理，则返回 1，否则返回 0。
 
 *********************************************
-``app.getWorkspaces()``
+## ``app.getWorkspaces()``
 
 **描述**
 获取可用工作区数组作为字符串。
@@ -294,7 +293,7 @@ None.
     ];
 
 *********************************************
-``app.isDocument(path)``
+## ``app.isDocument(path)``
 
 **描述**
 确定路径中的文件是否可以作为 Premiere Pro 打开 : `project <project>`.
@@ -318,7 +317,7 @@ None.
     app.isDocument('~/Desktop/imageFile.mov');    // false
 
 *********************************************
-``app.isDocumentOpen()``
+## ``app.isDocumentOpen()``
 
 **描述**
 判断是否有 :`projects <project>` 目前开放.
@@ -330,7 +329,7 @@ None.
 Returns **true** 如果至少有 1 个项目是开放的；否则 **false**.
 
 *********************************************
-``app.newProject(path)``
+## ``app.newProject(path)``
 
 **描述**
 Creates a new .prproj :ref:`project`, at the specified path.
@@ -338,18 +337,17 @@ Creates a new .prproj :ref:`project`, at the specified path.
 **Parameters 参数**
 | Argument | Type       | Description                                                                  |
 | -------- | ---------- | ---------------------------------------------------------------------------- |
-| ``path`` | ``String`` | A full path to new project; a .prproj extension will be added, if necessary. |
+| ``path`` | ``String`` | 新项目的完整路径；如有必要，将添加 .prproj 扩展名. |
 
 
 **Returns 返回**
 Returns **true** if successful.
 
-
 ***********************
-``app.openDocument(path)``
+## ``app.openDocument(path)``
 
 **描述**
-Opens the file at the specified path, as a Premiere Pro :ref:`project`.
+在指定路径打开文件，作为 Premiere Pro :`project`.
 **Parameters 参数**
 | Argument                     | Type        | Description                                                     |
 | ---------------------------- | ----------- | --------------------------------------------------------------- |
@@ -363,7 +361,7 @@ Opens the file at the specified path, as a Premiere Pro :ref:`project`.
 Returns **true** 如果文件被成功打开.
 
 *********************************************
-``app.openFCPXML(path, projPath)``
+## ``app.openFCPXML(path, projPath)``
 
 **描述**
 将 FCP XML 文件作为 Premiere Pro 打开 :`project` (在 projPath 中指定).
@@ -378,7 +376,7 @@ Returns **true** 如果文件被成功打开.
 Returns **true** 如果文件作为 Premiere Pro 成功打开 :`project`.
 
 *********************************************
-``app.quit()``
+## ``app.quit()``
 
 **描述**
 退出 Premiere Pro；系统将提示用户保存对 :`project`.
@@ -390,7 +388,7 @@ None.
 Nothing.
 
 *********************************************
-``app.setEnableProxies(enabled)``
+## ``app.setEnableProxies(enabled)``
 
 **描述**
 确定当前是否启用代理使用。
@@ -406,7 +404,7 @@ Nothing.
 如果代理启用已更改，则返回 1.
 
 ************************************************;
-``app.setExtensionPersistent(extensionID, persistent)``
+## ``app.setExtensionPersistent(extensionID, persistent)``
 
 **描述**
 在此会话中，具有给定 extensionID 的扩展是否持续存在.
@@ -430,7 +428,7 @@ Returns **true** 如果成功.
     app.setExtensionPersistent(extensionID, persistent);
 
 *********************************************
-``app.setScratchDiskPath(path, scratchDiskType)``
+## ``app.setScratchDiskPath(path, scratchDiskType)``
 
 **描述**
 指定用于 Premiere Pro 的暂存盘路径之一的路径.
@@ -453,7 +451,7 @@ Returns 'true' if successful.
     }
     
 *********************************************
-``app.setSDKEventMessage(message, decorator)``
+## ``app.setSDKEventMessage(message, decorator)``
 
 **描述**
 将字符串写入 Premiere Pro 的事件面板.
@@ -468,7 +466,7 @@ Returns 'true' if successful.
 如果成功则返回“真”.
 
 *********************************************
-``app.setWorkspace(workspace)``
+## ``app.setWorkspace(workspace)``
 
 **描述**
 将工作区设置为活动。利用 :`app.getWorkspaces` 获取所有可用工作区的列表.
@@ -492,7 +490,7 @@ Returns 'true' if successful.
     }
 
 *********************************************
-``app.trace()``
+## ``app.trace()``
 
 **描述**
 将字符串写入 Premiere Pro 的调试控制台.
@@ -505,7 +503,7 @@ Returns **true** 如果添加了跟踪.
 
 
 *********************************************
-``app.getProjectViewIDs()``
+## ``app.getProjectViewIDs()``
 
 **描述**
 返回与任何项目关联的当前打开视图的视图 ID.
@@ -527,7 +525,7 @@ None.
 
 
 *********************************************
-``app.getProjectFromViewID()``
+## ``app.getProjectFromViewID()``
 
 **描述**
 返回与提供的视图 ID 关联的项目.
@@ -556,7 +554,7 @@ None.
 
 *********************************************
 
-``app.getCurrentProjectViewSelection()``
+## ``app.getCurrentProjectViewSelection()``
 
 **描述**
 返回在当前活动项目视图中选择的项目项数组.
