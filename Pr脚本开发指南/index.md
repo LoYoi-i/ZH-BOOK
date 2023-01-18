@@ -1,14 +1,14 @@
 ============================================
 欢迎使用 Premiere Pro 脚本指南！
 ============================================
-## 1.0介绍
+## 1.0 INTRODUCTION 介绍
    ### [1.1应用](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/application/application.rst)
    ### [1.2应用](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/application/application.rst)
    
-## 2.0 应用对象 ``app.``
+## 2.0 APPLICATION 应用对象 ``app.``
    ### [2.1应用](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/application/application.rst)
 
-## 3.0 Anywhere对象
+## 3.0 GENERAL 一般
    ### [3.1 anywhere](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/general/anywhere.rst)
    ### [3.2 encoder 编码器](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/general/encoder.rst)
    ### [3.3 marker 标记](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/general/marker.rst)
@@ -19,14 +19,26 @@
    ### [3.8 properties 属性](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/general/properties.rst)
    ### [3.9 sourcemonitor 源监视器](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/general/sourcemonitor.rst)
    
-## 4.0 项目对象
-   ### [4.1应用](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/application/application.rst)
+## 4.0 ITEM 项目
+   ### [4.1 projectitem 项目项](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/item/projectitem.rst)
+   ### [4.2 trackitem 跟踪项](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/item/trackitem.rst)
 
-## 5.0 组件对象
-   ### [5.1应用](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/application/application.rst)
+## 5.0 SEQUENCE 序列
+   ### [5.1 component 组件对象](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/sequence/component.rst)
+   ### [5.2 componentparam 组件参数对象](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/sequence/componentparam.rst)
+   ### [5.3 Sequence 序列对象](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/sequence/sequence.rst)
+   ### [5.4 track 轨道](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/sequence/track.rst)
    
-## 6.0 其他对象
-   ### [6.1应用](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/application/application.rst)
+## 6.0  OTHER 其他
+   ### [6.1 audiochannelmapping 音频通道化](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/other/audiochannelmapping.rst)
+   ### [6.2 time 时间](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/other/time.rst)
 
-## 7.0 集合对象
-   ### [7.1应用](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/application/application.rst)
+## 7.0 COLLECTION 集合
+   ### [7.1 collection 集合](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/collection.rst)
+   ### [7.2 componentcollection 组件集合](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/componentcollection.rst)
+   ### [7.3 markercollection 选择所有标记集合](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/markercollection.rst)
+   ### [7.4 projectcollection 项目集合](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/projectcollection.rst)
+   ### [7.5 projectitemcollection 项目项集合](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/projectitemcollection.rst)
+   ### [7.6 sequencecollection 序列采集](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/sequencecollection.rst)
+   ### [7.7 trackcollection 轨道收集](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/trackcollection.rst)
+   ### [7.8 trackitemcollection 轨迹采集](https://github.com/LoYoi-i/ZH-BOOK/blob/main/Pr%E8%84%9A%E6%9C%AC%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/collection/trackitemcollection.rst)
