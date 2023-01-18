@@ -1,5 +1,5 @@
 ============================================
-Welcome to the Premiere Pro Scripting Guide!
+欢迎使用 Premiere Pro 脚本指南！
 ============================================
 
 .. toctree::
