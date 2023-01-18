@@ -1,493 +1,285 @@
-
-.. _Application:
-
-Application object
+应用对象
 ==================
 
 ``app``
 
-**Description**
-
-Provides access to objects and application settings within Premiere Pro.
-The single global object is always available by its name, **app**.
-
-----
+**描述**
+提供对 Premiere Pro 中对象和应用程序设置的访问.
+单个全局对象始终可以通过其名称获得, **app**.
 
 ==========
-Attributes
+Attributes 属性
 ==========
-
-.. _app.anywhere:
-
-app.anywhere
-*********************************************
 
 ``app.anywhere``
 
-**Description**
+**描述**
+`anywhere`, 提供对可用 Anywhere 服务器的访问。仅在 Anywhere 配置中运行时可用（已停产）.
 
-An :ref:`anywhere`, providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
+**类型**
+`anywhere`.
 
-**Type**
-
-:ref:`anywhere`.
-
-----
-
-.. _app.build:
-
-app.build
 *********************************************
-
 ``app.build``
 
-**Description**
+**描述**
+正在运行的 Premiere Pro 版本号。
 
-The number of the build of Premiere Pro being run.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a build version of current application *(Adobe Premiere Pro version 14.3.1 (Build 45))*
-
-.. code:: javascript
+**示例**
+获取当前应用程序的构建版本 *（Adobe Premiere Pro 版本 14.3.1（构建 45））*
 
     parseInt(app.build); // 45
 
-----
-
-.. _app.encoder:
-
-app.encoder
 *********************************************
-
 ``app.encoder``
 
-**Description**
-
-Provides access to Adobe Media Encoder (on the same system).
-
+**描述**
+提供对 Adobe Media Encoder（在同一系统上）的访问。
 Warning: app.encoder is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in 22 and up.
 https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488
 
-**Type**
+**类型**
+`encoder`.
 
-:ref:`encoder`.
-
-----
-
-.. _app.getAppPrefPath:
-
-app.getAppPrefPath
 *********************************************
-
 ``app.getAppPrefPath``
 
-**Description**
+**描述**
+包含当前活动的“Adobe Premiere Pro Prefs”文件的路径。
 
-The path containing the currently active "Adobe Premiere Pro Prefs" file.
+**类型**
+字符串; 只读.
 
-**Type**
+**示例**
+获取当前活动首选项文件的路径
 
-String; read-only.
-
-**Example**
-
-Get a path to a currently active preference file
-
-.. code:: javascript
 
     app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 
-----
-
-.. _app.getAppSystemPrefPath:
-
-app.getAppSystemPrefPath
 *********************************************
 
 ``app.getAppSystemPrefPath``
 
-**Description**
+**描述**
+Premiere Pro 的活动配置文件，不特定于给定用户。
 
-Premiere Pro's active configuration files, not specific to a given user.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a path to a currently active configuration folder
-
-.. code:: javascript
+**示例**
+获取当前活动配置文件夹的路径
 
     app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 
-----
-
-.. _app.getPProPrefPath:
-
-app.getPProPrefPath
 *********************************************
-
 ``app.getPProPrefPath``
 
-**Description**
+**描述**
+包含当前活动的“Adobe Premiere Pro Prefs”文件的路径。
 
-The path containing the currently active "Adobe Premiere Pro Prefs" file.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a path to a currently active preference file
-
-.. code:: javascript
+**示例**
+获取当前活动首选项文件的路径
 
     app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 
-----
-
-.. _app.getPProSystemPrefPath:
-
-app.getPProSystemPrefPath
 *********************************************
-
 ``app.getPProSystemPrefPath``
 
-**Description**
+**描述**
+Premiere Pro 的活动配置文件，不特定于给定用户。
 
-Premiere Pro's active configuration files, not specific to a given user.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a path to a currently active configuration folder
-
-.. code:: javascript
+**示例**
+获取当前活动配置文件夹的路径
 
     app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 
-----
-
-.. _app.learnPanelContentDirPath:
-
-app.learnPanelContentDirPath
 *********************************************
-
 ``app.learnPanelContentDirPath``
 
-**Description**
+**描述**
+获取学习面板的内容目录路径。
 
-Get the Learn panel's contents directory path.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a path to a Learn panel's directory
-
-.. code:: javascript
+**示例**
+获取学习面板目录的路径
 
     app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
 
-----
-
-.. _app.learnPanelExampleProjectDirPath:
-
-app.learnPanelExampleProjectDirPath
 *********************************************
-
 ``app.learnPanelExampleProjectDirPath``
 
-**Description**
+**描述**
+获取学习面板的示例项目目录路径。
 
-Get the Learn panel's example projects directory path.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a path to a Learn panel's example projects' directory
-
-.. code:: javascript
+**示例**
+获取学习面板示例项目目录的路径
 
     app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
 
-----
-
-.. _app.metadata:
-
-app.metadata
 *********************************************
-
 ``app.metadata``
 
-**Description**
+**描述**
+获取应用程序元数据对象。
 
-Get applications Metadata object.
+**类型**
+`metadata`, 只读.
 
-**Type**
-
-:ref:`metadata`, read-only.
-
-----
-
-.. _app.path:
-
-app.path
 *********************************************
-
 ``app.path``
 
-**Description**
+**描述**
+获取应用程序可执行文件的路径。
 
-Get a path to applications executable file.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a path to applications executable file.
-
-.. code:: javascript
-
+**示例**
+获取应用程序可执行文件的路径。
     app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
 
-----
-
-.. _app.production:
-
-app.production
 *********************************************
-
 ``app.production``
 
-**Description**
+**描述**
+目前积极生产。
 
-The currently active production.
+**类型**
+`production` 如果至少有 1 个生产是开放的, ``null`` 否则.
 
-**Type**
-
-:ref:`production` if at least 1 production is open, ``null`` otherwise.
-
-----
-
-.. _app.project:
-
-app.project
 *********************************************
-
 ``app.project``
 
-**Description**
+**描述**
 
-The currently active project.
+当前活动的项目。
 
-**Type**
+**类型**
+`project`.
 
-:ref:`project`.
-
-----
-
-.. _app.projectManager:
-
-app.projectManager
 *********************************************
-
 ``app.projectManager``
 
-**Description**
+**描述**
 
-Provides access to project management functions within Premiere Pro.
+提供对 Premiere Pro 中项目管理功能的访问。
 
-**Type**
+**类型**
+`projectManager`.
 
-:ref:`projectManager`.
-
-----
-
-.. _app.projects:
-
-app.projects
 *********************************************
-
 ``app.projects``
 
-**Description**
+**描述**
+引用所有打开项目的数组； ``numProjects`` 包含大小。
 
-An array referencing all open projects; ``numProjects`` contains size.
+**类型**
 
-**Type**
+`projectCollection`, 只读.
 
-:ref:`projectCollection`, read-only.
 
-----
-
-.. _app.properties:
-
-app.properties
 *********************************************
-
 ``app.properties``
 
-**Description**
+**描述**
+属性对象提供访问和修改首选项值的方法。
 
-The properties object provides methods to access and modify preference values.
+**类型**
+`properties`, 只读;
 
-**Type**
-
-:ref:`properties`, read-only;
-
-----
-
-.. _app.sourceMonitor:
-
-app.sourceMonitor
 *********************************************
-
 ``app.sourceMonitor``
 
-**Description**
+**描述**
+提供访问 : `sourceMonitor`.
 
-Provides access to :ref:`sourceMonitor`.
+**类型**
+`sourceMonitor`.
 
-**Type**
 
-:ref:`sourceMonitor`.
-
-----
-
-.. _app.userGuid:
-
-app.userGuid
 *********************************************
-
 ``app.userGuid``
 
-**Description**
+**描述**
 
-A unique identifier for the currently logged-in Creative Cloud user.
+当前登录的 Creative Cloud 用户的唯一标识符。
 
-**Type**
+**类型**
 
-String; read-only.
+字符串; 只读.
 
-----
-
-.. _app.version:
-
-app.version
 *********************************************
 
 ``app.version``
 
-**Description**
+**描述**
+Premiere Pro 的版本，提供 API。
 
-The version of Premiere Pro, providing the API.
+**类型**
+字符串; 只读.
 
-**Type**
-
-String; read-only.
-
-**Example**
-
-Get a version of a current application *(Adobe Premiere Pro version 14.3.1 (Build 45))*
-
-.. code:: javascript
-
+**示例**
+获取当前应用程序的版本 *（Adobe Premiere Pro 版本 14.3.1 (Build 45))*
     app.version; // 14.3.1
 
-----
+==============
+# Methods 方法
 
-=======
-Methods
-=======
-
-.. _app.enableQE:
-
-app.enableQE()
 *********************************************
-
 ``app.enableQE()``
 
-**Description**
+**描述**
+启用 Premiere Pro 的 QE DOM。
 
-Enables Premiere Pro's QE DOM.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
+**Returns 返回**
+如果启用了 QE DOM，则返回 true。
 
-Returns true if QE DOM was enabled.
-
-----
-
-.. _app.getEnableProxies:
-
-app.getEnableProxies()
 *********************************************
-
 ``app.getEnableProxies()``
 
-**Description**
+**描述**
+确定当前是否启用代理使用。
 
-Determines whether proxy usage is currently enabled.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
+**Returns 返回**
+如果启用了代理，则返回 1，否则返回 0。
 
-Returns 1 if proxies are enabled, 0 of they are not.
-
-----
-
-.. _app.getWorkspaces:
-
-app.getWorkspaces()
 *********************************************
-
 ``app.getWorkspaces()``
 
-**Description**
+**描述**
+获取可用工作区数组作为字符串。
 
-Obtains an array of available workspaces as Strings.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
+**Returns 返回**
+``Array`` 如果成功, ``null`` 如果不成功.
 
-``Array`` if successful, ``null`` if unsuccessful.
-
-**Example**
-
-Get a list of available workspaces.
-
-.. code:: javascript
+**示例**
+获取可用工作区的列表。
 
     app.getWorkspaces();
-    /* [
+     [
         "All Panels",
         "Assembly",
         "Audio",
@@ -499,220 +291,136 @@ Get a list of available workspaces.
         "Libraries",
         "Metalogging",
         "Production"
-    ]; */
+    ];
 
-----
-
-.. _app.isDocument:
-
-app.isDocument()
 *********************************************
-
 ``app.isDocument(path)``
 
-**Description**
+**描述**
+确定路径中的文件是否可以作为 Premiere Pro 打开 : `project <project>`.
 
-Determines whether the file at path can be opened as a Premiere Pro :ref:`project <project>`.
+**Parameters 参数**
 
-**Parameters**
+| 参数 | 类型       | 描述       |
+| -------- | ---------- | ----------------- |
+| ``path`` | ``String`` | 文件路径. |
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``path``          ``String``   A path to a file.
-================  ===========  =======================
 
-**Returns**
+**Returns 返回**
+返回 **true** 文件是否可以作为 Premiere Pro 打开 : `project <project>`.
 
-Returns **true** if file can be opened as a Premiere Pro :ref:`project <project>`.
-
-**Example**
-
-Test for valid project files
-
-.. code:: javascript
+**示例**
+测试有效的项目文件
 
     app.isDocument('~/Desktop/myProject.prproj'); // true
     app.isDocument('~/Desktop/textFile.txt');     // false
     app.isDocument('~/Desktop/footageFile.mov');  // false
     app.isDocument('~/Desktop/imageFile.mov');    // false
 
-----
-
-.. _app.isDocumentOpen:
-
-app.isDocumentOpen()
 *********************************************
-
 ``app.isDocumentOpen()``
 
-**Description**
+**描述**
+判断是否有 :`projects <project>` 目前开放.
 
-Determines whether there are any :ref:`projects <project>` currently open.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
+**Returns 返回**
+Returns **true** 如果至少有 1 个项目是开放的；否则 **false**.
 
-Returns **true** if at least 1 project is open; otherwise **false**.
-
-----
-
-.. _app.newProject:
-
-app.newProject()
 *********************************************
-
 ``app.newProject(path)``
 
-**Description**
-
+**描述**
 Creates a new .prproj :ref:`project`, at the specified path.
 
-**Parameters**
+**Parameters 参数**
+| Argument | Type       | Description                                                                  |
+| -------- | ---------- | ---------------------------------------------------------------------------- |
+| ``path`` | ``String`` | A full path to new project; a .prproj extension will be added, if necessary. |
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``path``          ``String``   A full path to new project; a .prproj extension will be added, if necessary.
-================  ===========  =======================
 
-**Returns**
-
+**Returns 返回**
 Returns **true** if successful.
 
-----
 
-.. _app.openDocument:
-
-app.openDocument()
 ***********************
-
 ``app.openDocument(path)``
 
-**Description**
-
+**描述**
 Opens the file at the specified path, as a Premiere Pro :ref:`project`.
+**Parameters 参数**
+| Argument                     | Type        | Description                                                     |
+| ---------------------------- | ----------- | --------------------------------------------------------------- |
+| ``path``                     | ``String``  | 要打开的文档的完整路径。                         |
+| ``suppressConversionDialog`` | ``Boolean`` | 可选，禁止项目转换对话框。               |
+| ``bypassLocateFileDialog``   | ``Boolean`` | 可选，绕过定位文件对话框.                        |
+| ``bypassWarningDialog``      | ``Boolean`` | 可选，绕过警告对话框.                                |
+| ``doNotAddToMRUList``        | ``Boolean`` | 可选，跳过将此文件添加到最近使用列表. |
 
-**Parameters**
+**Returns 返回**
+Returns **true** 如果文件被成功打开.
 
-====================================  ===========  =======================
-Argument                              Type         Description
-====================================  ===========  =======================
-``path``                              ``String``   Full path to the document to be opened. 
-``suppressConversionDialog``          ``Boolean``  Optional. Suppress project conversion dialog.
-``bypassLocateFileDialog``            ``Boolean``  Optional. Bypass the locate file dialog.
-``bypassWarningDialog``               ``Boolean``  Optional. Bypass warning dialog.
-``doNotAddToMRUList``                 ``Boolean``  Optional. Skip adding this file to the Most Recently Used List.
-====================================  ===========  =======================
-
-**Returns**
-
-Returns **true** if file was successfully opened.
-
-----
-
-.. _app.openFCPXML:
-
-app.openFCPXML()
 *********************************************
-
 ``app.openFCPXML(path, projPath)``
 
-**Description**
+**描述**
+将 FCP XML 文件作为 Premiere Pro 打开 :`project` (在 projPath 中指定).
 
-Opens an FCP XML file as a Premiere Pro :ref:`project` (specified in projPath).
-
-**Parameters**
-
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
+**Parameters 参数**
+| Argument | Type | Description |
+| -------- | ---- | ----------- |
 ``path``          ``String``   
 ``projPath``      ``String``   
-================  ===========  =======================
 
-**Returns**
+**Returns 返回**
+Returns **true** 如果文件作为 Premiere Pro 成功打开 :`project`.
 
-Returns **true** if file was successfully opened as a Premiere Pro :ref:`project`.
-
-----
-
-.. _app.quit:
-
-app.quit()
 *********************************************
-
 ``app.quit()``
 
-**Description**
+**描述**
+退出 Premiere Pro；系统将提示用户保存对 :`project`.
 
-Quits Premiere Pro; user will be prompted to save any changes to :ref:`project`.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
-
+**Returns 返回**
 Nothing.
 
-----
-
-.. _app.setEnableProxies:
-
-app.setEnableProxies()
 *********************************************
-
 ``app.setEnableProxies(enabled)``
 
-**Description**
+**描述**
+确定当前是否启用代理使用。
 
-Determines whether proxy usage is currently enabled.
+**Parameters 参数**
 
-**Parameters**
+| Argument    | Type        | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| ``enabled`` | ``Integer`` | ``1`` 打开代理, ``0`` 关掉它们. |
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``enabled``       ``Integer``  ``1`` turns proxies on, ``0`` turns them off.
-================  ===========  =======================
 
-**Returns**
+**Returns 返回**
+如果代理启用已更改，则返回 1.
 
-Returns 1 if proxy enablement was changed.
-
-----
-
-.. _app.setExtensionPersistent:
-
-app.setExtensionPersistent()
-************************************************
-
+************************************************;
 ``app.setExtensionPersistent(extensionID, persistent)``
 
-**Description**
+**描述**
+在此会话中，具有给定 extensionID 的扩展是否持续存在.
 
-Whether extension with the given extensionID persists, within this session.
+**Parameters 参数**
+| Argument        | Type        | Description                                                       |
+| --------------- | ----------- | ----------------------------------------------------------------- |
+| ``extensionID`` | ``String``  | Which extension to modify.                                        |
+| ``persistent``  | ``Integer`` | Pass ``1`` to keep extension in memory, ``0`` to allow unloading. |
 
-**Parameters**
+**Returns 返回**
+Returns **true** 如果成功. 
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``extensionID``   ``String``   Which extension to modify.
-``persistent``    ``Integer``  Pass ``1`` to keep extension in memory, ``0`` to allow unloading.
-================  ===========  =======================
-
-**Returns**
-
-Returns **true** if successful. 
-
-**Example**
-
-.. code:: javascript
+**示例**
 
     var extensionID = 'com.adobe.PProPanel';
     // 0 - while testing (to enable rapid reload);
@@ -721,109 +429,60 @@ Returns **true** if successful.
 
     app.setExtensionPersistent(extensionID, persistent);
 
-----
-
-.. _app.setScratchDiskPath:
-
-app.setScratchDiskPath()
 *********************************************
-
 ``app.setScratchDiskPath(path, scratchDiskType)``
 
-**Description**
+**描述**
+指定用于 Premiere Pro 的暂存盘路径之一的路径.
 
-Specifies the path to be used for one of Premiere Pro's scratch disk paths.
+**Parameters 参数**
+| Argument            | Type       | Description                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ``path``            | ``String`` | 要使用的新路径.                                                                                                                                                                                                                                                                                                                                          |
+| ``scratchDiskType`` | ``Enum``   | 枚举值，必须是以下之一:  ``ScratchDiskType.FirstVideoCaptureFolder``  ``ScratchDiskType.FirstAudioCaptureFolder`` ``ScratchDiskType.FirstVideoPreviewFolder`` ``ScratchDiskType.FirstAudioPreviewFolder`` ``ScratchDiskType.FirstAutoSaveFolder``  ``ScratchDiskType.FirstCCLibrariesFolder`` ``ScratchDiskType.FirstCapsuleMediaFolder`` |
 
-**Parameters**
 
-==========================  ===========  =======================
-Argument                    Type         Description
-==========================  ===========  =======================
-``path``                    ``String``   The new path to be used.
-``scratchDiskType``         ``Enum``     Enumerated value, must be one of the following: 
-
-                                         - ``ScratchDiskType.FirstVideoCaptureFolder``
-                                         - ``ScratchDiskType.FirstAudioCaptureFolder``
-                                         - ``ScratchDiskType.FirstVideoPreviewFolder``
-                                         - ``ScratchDiskType.FirstAudioPreviewFolder``
-                                         - ``ScratchDiskType.FirstAutoSaveFolder``
-                                         - ``ScratchDiskType.FirstCCLibrariesFolder``
-                                         - ``ScratchDiskType.FirstCapsuleMediaFolder``
-==========================  ===========  =======================
-
-**Returns**
-
+**Returns 返回**
 Returns 'true' if successful.
 
-**Example**
-
-.. code:: javascript
+**示例**
 
     var scratchPath = Folder.selectDialog('Choose new scratch disk folder');
     if (scratchPath && scratchPath.exists) {
         app.setScratchDiskPath(scratchPath.fsName, ScratchDiskType.FirstAutoSaveFolder);
     }
     
-----
-
-.. _app.setSDKEventMessage:
-
-app.setSDKEventMessage()
 *********************************************
-
 ``app.setSDKEventMessage(message, decorator)``
 
-**Description**
+**描述**
+将字符串写入 Premiere Pro 的事件面板.
 
-Writes a string to Premiere Pro's Events panel.
+**Parameters 参数**
+| Argument      | Type       | Description                                                |
+| ------------- | ---------- | ---------------------------------------------------------- |
+| ``message``   | ``String`` | 要显示的消息.                                      |
+| ``decorator`` | ``String`` | 枚举之一:    ``info``    ``warning``    ``error`` |
 
-**Parameters**
+**Returns 返回**
+如果成功则返回“真”.
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``message``       ``String``   A message to display.
-``decorator``     ``String``   Decorator, one of:
-
-                               | ``info``
-                               | ``warning``
-                               | ``error``
-================  ===========  =======================
-
-**Returns**
-
-Returns 'true' if successful.
-
-----
-
-.. _app.setWorkspace:
-
-app.setWorkspace()
 *********************************************
-
 ``app.setWorkspace(workspace)``
 
-**Description**
+**描述**
+将工作区设置为活动。利用 :`app.getWorkspaces` 获取所有可用工作区的列表.
 
-Set workspace as active. Use :ref:`app.getWorkspaces` to get a list of all available workspaces.
+**Parameters 参数**
+| Argument      | Type       | Description                |
+| ------------- | ---------- | -------------------------- |
+| ``workspace`` | ``String`` | 工作区的名称. |
 
-**Parameters**
-
-=============  ==========  ==============================
-Argument       Type        Description
-=============  ==========  ==============================
-``workspace``  ``String``  The name of the workspace.
-=============  ==========  ==============================
-
-**Returns**
-
+**Returns 返回**
 ``Boolean``.
 
-**Example**
-
-Activate ``Editing`` workspace.
-
-.. code:: javascript
+**示例**
+启用 ``Editing`` 工作区.
 
     var workspace = 'Editing';
     if (app.setWorkspace(workspace)) {
@@ -832,51 +491,32 @@ Activate ``Editing`` workspace.
         alert('Could not set "' + workspace + '" workspace');
     }
 
-----
-
-.. _app.trace:
-
-app.trace()
 *********************************************
-
 ``app.trace()``
 
-**Description**
+**描述**
+将字符串写入 Premiere Pro 的调试控制台.
 
-Writes a string to Premiere Pro's debug console.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
+**Returns 返回**
+Returns **true** 如果添加了跟踪.
 
-Returns **true** if trace was added.
 
-----
-
-.. _app.getProjectViewIDs:
-
-app.getProjectViewIDs()
 *********************************************
-
 ``app.getProjectViewIDs()``
 
-**Description**
+**描述**
+返回与任何项目关联的当前打开视图的视图 ID.
 
-Returns the view IDs of currently-open views, associated with any project.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
+**Returns 返回**
+一组视图 ID；可以为空.
 
-An array of view IDs; can be null.
-
-**Example**
-
-.. code:: javascript
+**示例**
 
     var allViewIDs = app.getProjectViewIDs();
     if (allViewIDs){
@@ -885,30 +525,20 @@ An array of view IDs; can be null.
         // No views open.
     }
 
-----
 
-.. _app.getProjectFromViewID:
-
-app.getProjectFromViewID()
 *********************************************
-
 ``app.getProjectFromViewID()``
 
-**Description**
+**描述**
+返回与提供的视图 ID 关联的项目.
 
-Returns the Project associated with the provided View ID.
+**Parameters 参数**
+视图 ID，获取自 ``getProjectViewIDs``. 
 
-**Parameters**
+**Returns 返回**
+一个 Project 对象，用于与提供的视图 ID 关联的项目。可 ``null``.
 
-A View ID, obtained from ``getProjectViewIDs``. 
-
-**Returns**
-
-A Project object, for the project associated with the provided View ID. Can be ``null``.
-
-**Example**
-
-.. code:: javascript
+**示例**
 
     var allViewIDs = app.getProjectViewIDs();
     if (allViewIDs){
@@ -924,30 +554,20 @@ A Project object, for the project associated with the provided View ID. Can be `
         // No views open.
     }
 
-----
-
-.. _app.getCurrentProjectViewSelection:
-
-app.getCurrentProjectViewSelection()
 *********************************************
 
 ``app.getCurrentProjectViewSelection()``
 
-**Description**
+**描述**
+返回在当前活动项目视图中选择的项目项数组.
 
-Returns an array of projectItems selected, in the current active project view.
-
-**Parameters**
-
+**Parameters 参数**
 None.
 
-**Returns**
+**Returns 返回**
+一组项目项；可以为空.
 
-An array of projectItems; can be null.
-
-**Example**
-
-.. code:: javascript
+**示例**
 
     var selectedItems = app.getCurrentProjectViewSelection();
     if (selectedItems){
@@ -955,4 +575,3 @@ An array of projectItems; can be null.
     } else {
         // No projectItems selected.
     }
-
