@@ -1,15 +1,9 @@
 ============================================
 欢迎使用 Premiere Pro 脚本指南！
 ============================================
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Introduction
-
-    introduction/index
-    introduction/changelog
-    introduction/extendscript-overview
-    introduction/how-to-execute-scripts
+#Introduction
+    ##introduction/index
+    
 
 .. toctree::
     :maxdepth: 2
